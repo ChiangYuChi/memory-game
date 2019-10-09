@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: -webkit-linear-gradient(290deg, #02CCBA 0%, #AA7ECD 100%);
+  background: -o-linear-gradient(290deg, #02CCBA 0%, #AA7ECD 100%);
+  background: linear-gradient(160deg, #02CCBA 0%, #AA7ECD 100%);
+  background-attachment: fixed; }
+
+#game .grid {
+  max-width: 900px;
+  margin: 80px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  height: 500px; }
+
+#game .card {
+  position: relative;
+  -webkit-transition: all .4s linear;
+  -o-transition: all .4s linear;
+  transition: all .4s linear;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d; }
+
+#game .match {
+  background-image: none !important; }
+
+#game .card,
+#game .back,
+#game .front {
+  margin: 5px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 190px;
+  width: 120px;
+  border-radius: 10px; }
+
+#game .back,
+#game .front {
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+#game .front {
+  background: url("/img/card-front.png");
+  background-size: contain; }
+
+#game .back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  background-color: white; }
+
+#game .selected {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+#game .match .front {
+  background: none !important; }

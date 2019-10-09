@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(160deg, #02CCBA 0%, #AA7ECD 100%);
+    background-attachment: fixed;
+
+}
+
+#game {
+    .grid {
+        max-width: 900px;
+        margin: 80px auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+        height: 500px;
+
+    }
+
+    .card {
+        position: relative;
+        -webkit-transition: all .4s linear;
+        -o-transition: all .4s linear;
+        transition: all .4s linear;
+        -webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+
+
+
+    }
+
+
+    .match {
+
+        background-image: none !important;
+    }
+
+    .card,
+    .back,
+    .front {
+        margin: 5px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        height: 190px;
+        width: 120px;
+
+        border-radius: 10px;
+
+
+    }
+
+
+
+
+
+    .back,
+    .front {
+        position: absolute;
+        backface-visibility: hidden;
+    }
+
+    .front {
+        background: url('/img/card-front.png');
+        background-size: contain;
+
+    }
+
+    .back {
+        transform: rotateY(180deg);
+        background-color: white;
+
+
+    }
+
+    .selected {
+        transform: rotateY(180deg);
+    }
+
+    .match .front {
+        background: none !important;
+    }
+
+
+
+
+
+}
