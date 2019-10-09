@@ -54,7 +54,7 @@ body {
   backface-visibility: hidden; }
 
 #game .front {
-  background: url("../img/card-front.png");
+  background: url("./../img/card-front.png");
   background-size: contain; }
 
 #game .back {
